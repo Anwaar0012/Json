@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Accessing JSON Object Nested Array Accessing</h1>
+    <div id="Myid">
+
+    </div>
+    <script>
+        var obj, i,j, x ="";
+        obj = {
+        "PERSONAL NUMBER": "31448233",
+        "NAME": "MUHAMMAD ANWAAR",
+        "DOB": "11/12/1981",
+        "Mobile": 3012476595,
+        "city":"Piplan",
+        "Courses": [
+            {
+                "CategoryName":"WEb Development",
+                "courseName":["php","python",".Net"]
+            },
+            {
+                "CategoryName":"Mobile App Development",
+                "courseName":["Android","Flutter","Dart"]
+            },
+            {
+                "CategoryName":"Digital Marketing",
+                "courseName":["SEO","SEM","SMO"]
+            }
+        ],
+
+      };
+        
+        for(var i in obj.Courses){
+
+            x +="<h1>"+obj.Courses[i].CategoryName+"<h1/>";
+            for(j in obj.Courses[i].courseName){
+                x+="<h3>"+obj.Courses[i].courseName[j]+"<h3/"+"<br/>";
+
+            }
+
+        }
+        document.getElementById("Myid").innerHTML=x;
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Accessing JSON Object value using (.)dot notation</h1>
+    <div id="Myid">
+
+    </div>
+    <script>
+      var obj = {
+        "PERSONAL NUMBER": "31448233",
+        "NAME": "MUHAMMAD ANWAAR",
+        "DOB": "11/12/1981",
+        "Mobile": 3012476595,
+        "city":"Piplan",
+        "Course": ["Python", "JavaScript", "C Shap"],
+        "Address": {
+          "Moh/Street": "BhachranWala",
+          "P/O": "Doaba",
+          "Tehsil": "Piplan",
+          "Distt": "Mianwali",
+        },
+       " Married": false,
+        "Date of Death": null,
+
+      };
+    //   Accessing values with dot . method 
+    //   var MyName = obj.NAME;
+    //   var MyDob = obj.DOB;
+    //   var MyMobile= obj.Mobile;
+    //   var MyCity = obj.city;
+    // Accessing Value with [] brackets
+    var MyName = obj["NAME"];
+      var MyDob = obj["DOB"];
+      var MyMobile= obj["Mobile"];
+      var MyCity = obj["city"];
+      document.getElementById("Myid").innerHTML=`Name is: ${MyName}<br/> Date of Birth : ${MyDob}<br/>Mobile No :${MyMobile}<br/> Residency at : ${MyCity}`;
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json tut</title>
+</head>
+<body>
+    <h1>Accessing Array in json <object data="" type=""></object></h1>
+    <div id="Myid">
+
+    </div>
+    <script>
+        var obj = {
+        "PERSONAL NUMBER": "31448233",
+        "NAME": "MUHAMMAD ANWAAR",
+        "DOB": "11/12/1981",
+        "Mobile": 3012476595,
+        "city":"Piplan",
+        "Course": ["Python", "JavaScript", "C Shap","HTML", "CSS"],
+        "Address": {
+          "Moh/Street": "BhachranWala",
+          "P/O": "Doaba",
+          "Tehsil": "Piplan",
+          "Distt": "Mianwali",
+        },
+       "Married": false,
+        "Date of Death": null,
+
+      };
+      // Accessing Array using index No's
+      var course1 =obj.Course[0]
+      var course2 =obj.Course[1]
+      var course3 =obj.Course[2]
+      var course4 =obj.Course[3]
+      var course5 =obj.Course[4]
+      document.getElementById("Myid").innerHTML+=`Mastery in ${course1}  <br/> Mastery in ${course2}  <br/> Mastery in ${course3}  <br/> Mastery in ${course4}  <br/> Mastery in ${course5}  <br/>`;
+        
+        // for(var i in obj){
+        //     // Access all keys
+        //     // document.getElementById("Myid").innerHTML+=i+"<br/>";
+        //     // Accessing all value of obj[i] means with index
+        //     // document.getElementById("Myid").innerHTML+=obj[i]+"<br/>";
+        //     // Accessing both key and values
+        //     document.getElementById("Myid").innerHTML+=`${i} : ${obj[i]} <br/>`;
+        // }
+    </script>
+
+    
+</body>
+</html>

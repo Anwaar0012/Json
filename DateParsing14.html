@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Date parsing of json to js date</h1>
+    <div id="myid">
+
+    </div>
+
+    <script>
+        // var obj = `{"name":"Muhammad Anwaar","Dob":"2022-10-21"}`
+        // var data = JSON.parse(obj);
+        // data.Dob = new Date(data.Dob);
+        // document.getElementById('myid').innerHTML = `Name ${data.name} <br/> ${data.Dob}`
+        // method 2 with reviver function
+        var obj = `{"name":"Muhammad Anwaar","Dob":"2022-10-21"}`
+        var data = JSON.parse(obj,(key,value)=>{
+            if(key === "Dob"){
+                return new Date(value);
+            }
+            else{ return value }
+        });
+        document.getElementById('myid').innerHTML = `Name ${data.name} <br/> ${data.Dob}`
+    </script>
+</body>
+</html>

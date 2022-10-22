@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Converting jason string into javascript object</h2>
+    <h3>Using JSON.parse() method</h3>
+    <div id="Myid"></div>
+
+    <script>
+      var obj = `{
+        "name":"MUHAMMAD ANWAAR",
+        "Courses":["11/12/1981"]
+    }`
+      var data = JSON.parse(obj);
+      var name = data.name;
+      var c1=data.Courses[0]
+      document.getElementById(
+        "Myid"
+      ).innerHTML = `${name} ${c1}`
+    //   "<br/>"${dob}"<br/>"${mobile}"<br/>"${city}"<br/>"${c1}`;
+      console.log(data);
+    </script>
+  </body>
+</html>

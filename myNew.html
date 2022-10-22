@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2></h2>
+    <h3>Using JSON.parse() method</h3>
+    <div id="Myid"></div>
+
+    <script>
+      var data = [
+  {
+    "PersonalNumber": "30709138",
+    "name": "MUHAMMAD RAFIQUE",
+    "dob": "03/08/1964",
+    "fatherName": "MUHAMMAD AMEER",
+    "cnicNo": "3830340173571",
+    "mobile": "03455832429",
+    "address": "VILLAGE & P.O DOABA TEHSIL PIPLAN DISTT MIANWALI",
+    "academicQualification": "B.A",
+    "profQualification": "B.ED",
+    "designation": "SST  ARTS",
+    "basicPayScale": "16",
+    "dataOfFirstAppointment": "18/101984",
+    "designationOfFirstAppointment": "EST",
+    "PlaceofFirstAppointment": "GHS THAMEY WALI",
+    "DATEOFJOININGCURRENTPLACE": "20/08/2016",
+    "currentPlaceOfPosting": "GES 2ML",
+    "bankAccountNo": "1002696",
+    "bankName": "MCB ",
+    "bankBranchName": "LIAQUATABAD PIPLAN",
+    "dateOfPromation)": "16/11/2012",
+    "dateOfRetirement": "02/08/2024",
+  },
+  {
+    "PersonalNumber": "31576683",
+    "name": "SOBIA ALAM",
+    "dob": "25/07/1987",
+    "fatherName": "MUHAMMAD ALAM",
+    "cnicNo": "3830358599156",
+    "mobile": "03007791175",
+    "address": "MOH KALYAR KUNDIAN TEH PIPLAN DISTT MIANWALI",
+    "academicQualification": "MSC",
+    "profQualification": "M.ED",
+    "designation": "EST SCIENCE",
+    "basicPayScale": "15",
+    "dataOfFirstAppointment": "30/08/2012",
+    "designationOfFirstAppointment": "SESE SCIENCE",
+    "PlaceofFirstAppointment": "GES 2ML",
+    "DATEOFJOININGCURRENTPLACE": "30/08/2012",
+    "currentPlaceOfPosting": "GES 2ML",
+    "bankAccountNo": "80-8",
+    "bankName": "NBP",
+    "bankBranchName": "KUNDIAN",
+    "dateOfPromation)": "-",
+    "dateOfRetirement": "24/07/2047",
+  },
+  {
+    "PersonalNumber": "31418496",
+    "name": "ZIA UR REHMAN",
+    "dob": "01/03/1982",
+    "fatherName": "MATI UR REHMAN",
+    "cnicNo": "3830309642377",
+    "mobile": "03004870435",
+    "address": "HAFIZWALA TEH PIPLAN DISTT MIANWALI",
+    "academicQualification": "M.A.",
+    "profQualification": "DARSE NIZAMI",
+    "designation": "EST AT",
+    "basicPayScale": "15",
+    "dataOfFirstAppointment": "26/10/2009",
+    "designationOfFirstAppointment": "SESE AT",
+    "PlaceofFirstAppointment": "GES 17ML",
+    "DATEOFJOININGCURRENTPLACE": "02/07/2019",
+    "currentPlaceOfPosting": "GES 2ML",
+    "bankAccountNo": "12947-0",
+    "bankName": "NBP",
+    "bankBranchName": "LIAQUAT ABAD PIPLAN",
+    "dateOfPromation)": "-",
+    "dateOfRetirement": "28/02/2042",
+  },
+  {
+    "PersonalNumber": "31448233",
+    "name": "MUHAMMAD ANWAAR",
+    "dob": "11/12/1981",
+    "fatherName": "MUHAMMAD FEROZE",
+    "cnicNo": "3830310097023",
+    "mobile": "03012476595",
+    "address": "VILLAGE & P.O DOABA TEHSIL PIPLAN DISTT MIANWALI",
+    "academicQualification": "M.A URDU",
+    "profQualification": "BED",
+    "designation": "EST URDU",
+    "basicPayScale": "15",
+    "dataOfFirstAppointment": "17/03/2010",
+    "designationOfFirstAppointment": "PST",
+    "PlaceofFirstAppointment": "GPS 8ML",
+    "DATEOFJOININGCURRENTPLACE": "02/07/2019",
+    "currentPlaceOfPosting": "GES 2ML",
+    "bankAccountNo": 7916963603,
+    "bankName": "HBL",
+    "bankBranchName": "LIAQUAT ABAD PIPLAN",
+    "dateOfPromation)": "02/07/2016",
+    "dateOfRetirement": "10/12/1941",
+  },
+  {
+    "PersonalNumber": "31019677",
+    "name": "MUHAMMAD AFZAL KHAN",
+    "dob": "16/09/1966",
+    "fatherName": "SHER BAHADUR KHAN",
+    "cnicNo": "3830310009211",
+    "mobile": "03025659006",
+    "address": "DERA CHIDRUKHAILAN WALA TEH PIPLAN DISTT MIANWALI",
+    "academicQualification": "D.COM,URDU ADEEB",
+    "profQualification": "PTC/CT",
+    "designation": "PST",
+    "basicPayScale": "14",
+    "dataOfFirstAppointment": "21/08/1989",
+    "designationOfFirstAppointment": "PST",
+    "PlaceofFirstAppointment": "GPS MOCHI WALA HARNOLI",
+    "DATEOFJOININGCURRENTPLACE": "01/04/2017",
+    "currentPlaceOfPosting": "GES 2ML",
+    "bankAccountNo": "12784-6",
+    "bankName": "NBP",
+    "bankBranchName": "LIAQUAT ABAD PIPLAN",
+    "dateOfPromation)": "-",
+    "dateOfRetirement": "15/09/2026",
+  },
+  {
+    "PersonalNumber": "31577082",
+    "name": "MASOOD AHMAD JOYIA",
+    "dob": "28/12/1985",
+    "fatherName": "ATTA MUHAMMAD",
+    "cnicNo": "3830318968683",
+    "mobile": "03046168508",
+    "address": "PHATHI JOYIANWALI TEHSIL PIPLAN DISTT MIANWALI",
+    "academicQualification": "MSC",
+    "profQualification": "M.ED",
+    "designation": "PST",
+    "basicPayScale": "14",
+    "dataOfFirstAppointment": "30/08/2012",
+    "designationOfFirstAppointment": "ESE",
+    "PlaceofFirstAppointment": "GES 2ML",
+    "DATEOFJOININGCURRENTPLACE": "30/08/2012",
+    "currentPlaceOfPosting": "GES 2ML",
+    "bankAccountNo": "001407917037503",
+    "bankName": "HBL",
+    "bankBranchName": "LIAQUAT ABAD PIPLAN",
+    "dateOfPromation)": "-",
+    "dateOfRetirement": "27/12/2045",
+  },
+  {
+    "PersonalNumber": "30712150",
+    "name": "RIFAT IQBAL",
+    "dob": "07/11/1979",
+    "fatherName": "ABDUL GHAFOOR",
+    "cnicNo": "3830309713171",
+    "mobile": "03013955321",
+    "address": "JALL SHUMALI TEH PIPLAN DISTT MIANWALI",
+    "academicQualification": "M.A ",
+    "profQualification": "M.ED",
+    "designation": "PST",
+    "basicPayScale": "14",
+    "dataOfFirstAppointment": "18/11/2004",
+    "designationOfFirstAppointment": "ESE",
+    "PlaceofFirstAppointment": "GES MELAY WALI",
+    "DATEOFJOININGCURRENTPLACE": "11/11/2009",
+    "currentPlaceOfPosting": "GES 2ML",
+    "bankAccountNo": "3097517635",
+    "bankName": "NBP",
+    "bankBranchName": "LIAQUAT ABAD PIPLAN",
+    "dateOfPromation)": "-",
+    "dateOfRetirement": "06/11/1939",
+  },
+  {
+    "PersonalNumber": "31708270",
+    "name": "MUHAMMAD NASIR SHAH",
+    "dob": "22/09/1989",
+    "fatherName": "MUHAMMAD ARIF SHAH",
+    "cnicNo": "3830351709811",
+    "mobile": "03037508404",
+    "address": "CIVIL HOSPITAL ROAD NEAR MASJID FAIZAN E MADINA KUNDIAN TEHSIL PIPLAN MIANWALI",
+    "academicQualification": "BSC ENGINEERING",
+    "profQualification": "B.ED",
+    "designation": "PST",
+    "basicPayScale": "14",
+    "dataOfFirstAppointment": "22/04/2015",
+    "designationOfFirstAppointment": "ESE",
+    "PlaceofFirstAppointment": "GES 2ML",
+    "DATEOFJOININGCURRENTPLACE": "22/04/2015",
+    "currentPlaceOfPosting": "GES 2ML",
+    "bankAccountNo": "101-8753-9",
+    "bankName": "UBL",
+    "bankBranchName": "KUNDIAN",
+    "dateOfPromation)": "-",
+    "dateOfRetirement": "21/09/1949",
+  },
+  {
+    "name": "AKHTAR HUSSAIN",
+    "dob": "01.10.1991",
+    "fatherName": "ATTA RASOOL",
+    "cnicNo": "3830381567593",
+    "mobile": 3074859117,
+    "address": "P.O JALL SHUMALI R.O JALL JANOOBI TEHSIL PIPLAN",
+    "academicQualification": "M.A",
+    "profQualification": "B.Ed",
+    "designation": "STI (EST)",
+    "dataOfFirstAppointment": 44508,
+    "PlaceofFirstAppointment": "GES 2 ML",
+    "DATEOFJOININGCURRENTPLACE": 44508,
+    "currentPlaceOfPosting": "GES 2ML"
+  },
+  {
+    "name": "MUHAMMAD RAFIQUE",
+    "PlaceofFirstAppointment": "GES 2 ML",
+    "DATEOFJOININGCURRENTPLACE": 44508,
+    "currentPlaceOfPosting": "GES 2ML"
+  },
+  {
+    "PersonalNumber": 31636414,
+    "name": "RAZA MUHAMMAD",
+    "dob": 33604,
+    "fatherName": "MIAN MUHAMMAD",
+    "cnicNo": "3830358788477",
+    "designation": "Naib Qasid",
+    "basicPayScale": 1,
+    "dataOfFirstAppointment": 41858,
+    "designationOfFirstAppointment": "Naib Qasid",
+    "currentPlaceOfPosting": "GES 2ML"
+  },
+  {
+    "PersonalNumber": 30928370,
+    "name": "ALTAF AHMED",
+    "dob": "22-02-1985",
+    "fatherName": "AFTAB AHMED",
+    "cnicNo": "383035006941",
+    "mobile": 3036369388,
+    "address": "R/O CHAK NO.02ML TEHSIL PIPLAN DISTT MIANWALI",
+    "academicQualification": "MIDDLE",
+    "profQualification": "-",
+    "designation": "CHOKIDAR",
+    "basicPayScale": 2,
+    "dataOfFirstAppointment": "13-02-2006",
+    "designationOfFirstAppointment": "CHOKIDAR",
+    "PlaceofFirstAppointment": "GHS 3-4ML",
+    "currentPlaceOfPosting": "GES 2ML"
+  }
+]
+var names=""
+  for (var index = 0; index < data.length; index++) {
+    var element =data[index];
+    var name =element.name;
+    var perno =element.PersonalNumber;
+    var nic =element.cnicNo;
+    var mobile =element.mobile;
+    var address =element.address;
+    var bps =element.basicPayScale;
+    var cpposting =element.currentPlaceOfPosting;
+    // names +=element;
+    document.getElementById("Myid").innerHTML+=`
+                                $Name: ${name} Per# :${perno} Nic# ${nic}<br/>
+                                Mobile No : ${mobile} BPS : ${bps}<br/>
+                                Currenet SChool: ${cpposting}
+                                Address : ${address} <br/> <hr/>
+
+                                `;
+    
+  }
+
+    </script>
+  </body>
+</html>

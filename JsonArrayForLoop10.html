@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json tut</title>
+</head>
+<body>
+    <h1>Accessing Array in json using for Loop <object data="" type=""></object></h1>
+    <div id="Myid">
+
+    </div>
+    <script>
+        var obj,i,x="";
+        obj = {
+        "PERSONAL NUMBER": "31448233",
+        "NAME": "MUHAMMAD ANWAAR",
+        "DOB": "11/12/1981",
+        "Mobile": 3012476595,
+        "city":"Piplan",
+        "Course": ["Python", "JavaScript", "C Shap","HTML", "CSS"],
+
+      };
+      // Modify Array Value
+    //   obj.Course[0]="Android";
+    // delete Array index value
+    // delete obj.Course[2]// dele index 2
+
+    // Modify Array key Value
+    //   obj.Mobile=03401696459;
+
+    // delete Array key and its value
+    delete obj.Mobile;// resule will be undefined because loop is running after this
+
+      // for (i = 0; i< obj.Course.length; i++) {
+      //   // store values in x one by one
+      //   x +=obj.Course[i]+"<br/>";
+        
+      // }
+      for(i in obj.Course){
+         // store values in x one by one
+         x +=obj.Course[i]+"<br/>";
+      }
+    //   document.getElementById("Myid").innerHTML=x;
+      document.getElementById("Myid").innerHTML=obj.NAME+"<br/>"+obj.Mobile ;
+        
+    </script>
+
+    
+</body>
+</html>

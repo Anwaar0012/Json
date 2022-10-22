@@ -1,0 +1,29 @@
+<!-- // A common way to use json to exchange data to/from a web Server 
+//When sending data to the web server  the data has to be string
+//Convert Java Script Object to string by JSON.stringify() method
+// but date object is exceptional -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Js Object to string by using JSON.stringify()</h1>
+    <div id="myid">
+
+    </div>
+    <script>
+        var obj={
+            name:"Anwaar",
+            mobile:"03012476595",
+            city:"Piplan"
+        }
+        var data = JSON.stringify(obj);
+        document.getElementById("myid").innerHTML=data;
+        console.log(obj,data)
+    </script>
+</body>
+</html>

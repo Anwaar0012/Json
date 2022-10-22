@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>working with json and js</h1>
+    <div id="myid">
+
+    </div>
+    <script>
+       var obj= `{
+    "PERSONAL NUMBER": "31448233",
+    "NAME OF Officer/Official": "MUHAMMAD ANWAAR",
+    "DATE OF BIRTH": "11/12/1981",
+    "FATHER NAME": "MUHAMMAD FEROZE",
+    "CNIC #": "3830310097023",
+    "Mobile": 3012476595,
+    "Course":["Python","JavaScript","C Shap"],
+    "Address": {
+        "Moh/Street":"BhachranWala",
+        "P/O":"Doaba",
+        "Tehsil":"Piplan",
+        "Distt":"Mianwali"
+    },
+    "married":false,
+    "Date of Death":null
+}`
+const data=JSON.parse(obj);
+document.getElementById("myid").innerHTML=data;
+console.log(data);
+    </script>
+</body>
+</html>

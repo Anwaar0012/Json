@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Accessing JSON Nested Object Keys/Value with for/in loop</h1>
+    <div id="Myid">
+
+    </div>
+    <script>
+        var obj, i, x ="";
+        obj = {
+        "PERSONAL NUMBER": "31448233",
+        "NAME": "MUHAMMAD ANWAAR",
+        "DOB": "11/12/1981",
+        "Mobile": 3012476595,
+        "city":"Piplan",
+        "Courses": {"course1":"Python","course2": "JavaScript","course3": "C Shap"},
+
+      };
+        
+        for(var i in obj.Courses){
+
+            // x +=obj.Courses[i] +"<br/>"// give only values
+            x +=i + ":"+ obj.Courses[i] +"<br/>" // we'll take key&values
+        }
+        document.getElementById("Myid").innerHTML=x;
+    </script>
+    
+</body>
+</html>
